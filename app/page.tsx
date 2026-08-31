@@ -420,8 +420,7 @@ export default function Home() {
       <header className="site-header">
         <div className="container header-inner">
           <a className="brand" href="#home" onClick={closeMenu} aria-label="Uğur Special ana sayfa">
-            <span className="brand-logo"><Image src="/logo.jpg" alt="Uğur Special logo" width={150} height={150} /></span>
-            <span className="brand-copy"><strong>UĞUR SPECIAL</strong><small>{t.brandLine}</small></span>
+            <span className="brand-logo brand-logo-only"><Image src="/logo.png" alt="Uğur Special — desen tasarım uygulama" width={1536} height={1024} /></span>
           </a>
 
           <nav className="desktop-nav" aria-label="Ana navigasyon">
@@ -565,7 +564,7 @@ export default function Home() {
       </section>
 
       <footer className="site-footer">
-        <div className="container footer-main"><a className="brand brand-footer" href="#home"><span className="brand-logo"><Image src="/logo.jpg" alt="Uğur Special logo" width={150} height={150} /></span><span className="brand-copy"><strong>UĞUR SPECIAL</strong><small>{t.brandLine}</small></span></a><div className="footer-message"><strong>{t.contact.footerCta}</strong><span>{t.contact.footerDescription}</span></div><div className="footer-links"><a href="mailto:info@ugurspecial.com"><Mail size={16} /> info@ugurspecial.com</a><a href="https://www.instagram.com/" target="_blank" rel="noreferrer"><AtSign size={16} /> Instagram</a></div></div>
+        <div className="container footer-main"><a className="brand brand-footer" href="#home" aria-label="Uğur Special ana sayfa"><span className="brand-logo brand-logo-only"><Image src="/logo.png" alt="Uğur Special — desen tasarım uygulama" width={1536} height={1024} /></span></a><div className="footer-message"><strong>{t.contact.footerCta}</strong><span>{t.contact.footerDescription}</span></div><div className="footer-links"><a href="mailto:info@ugurspecial.com"><Mail size={16} /> info@ugurspecial.com</a><a href="https://www.instagram.com/" target="_blank" rel="noreferrer"><AtSign size={16} /> Instagram</a></div></div>
         <div className="container footer-bottom"><span>© {new Date().getFullYear()} Uğur Special. Tüm hakları saklıdır.</span><span>Çağlayan · İstanbul</span></div>
       </footer>
 
