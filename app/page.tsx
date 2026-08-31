@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import Image from 'next/image';
 import {
   ArrowDown,
   ArrowUpRight,
@@ -420,7 +419,7 @@ export default function Home() {
       <header className="site-header">
         <div className="container header-inner">
           <a className="brand" href="#home" onClick={closeMenu} aria-label="Uğur Special ana sayfa">
-            <span className="brand-logo brand-logo-only"><Image src="/logo.png" alt="Uğur Special — desen tasarım uygulama" width={1536} height={1024} /></span>
+            <span className="brand-logo brand-logo-only"><img src="/logo.png" alt="Uğur Special — desen tasarım uygulama" width="1536" height="1024" /></span>
           </a>
 
           <nav className="desktop-nav" aria-label="Ana navigasyon">
@@ -478,7 +477,7 @@ export default function Home() {
           <div className="hero-visual">
             <div className="hero-visual-label">UĞUR SPECIAL <span>01 / 04</span></div>
             <div className="hero-image-wrap">
-              <Image src="/gallery/04-uygulamalar.png" alt="Uğur Special özel dikiş ve desen uygulamaları" fill priority sizes="(max-width: 760px) calc(100vw - 66px), 520px" />
+              <img src="/gallery/04-uygulamalar.png" alt="Uğur Special özel dikiş ve desen uygulamaları" />
               <div className="hero-image-shade" />
               <div className="hero-image-caption"><span>TEXTILE / DETAIL</span><strong>Yüzeyde fark<br />yaratan işçilik.</strong></div>
             </div>
@@ -538,7 +537,7 @@ export default function Home() {
 
           <div className="gallery-toolbar"><div className="filter-tabs" role="tablist" aria-label={t.gallery.eyebrow}>{([['all', t.gallery.all], ['current', t.gallery.current], ['archive', t.gallery.archive]] as Array<[GalleryFilter, string]>).map(([filter, label]) => <button className={galleryFilter === filter ? 'is-active' : ''} type="button" role="tab" aria-selected={galleryFilter === filter} key={filter} onClick={() => setGalleryFilter(filter)}>{label}</button>)}</div><span className="gallery-count">{String(filteredGallery.length).padStart(2, '0')} / 07</span></div>
 
-          <div className="gallery-grid">{filteredGallery.map((item, index) => <button className={`gallery-card gallery-card-${index + 1}`} type="button" key={item.src} onClick={() => setActiveImage(item)} aria-label={`${item[language]} - ${t.gallery.view}`}><Image src={item.src} alt={item[language]} fill sizes="(max-width: 420px) 100vw, (max-width: 760px) 50vw, (max-width: 1000px) 33vw, 25vw" /><span className="gallery-overlay" /><span className="gallery-card-content"><span className="gallery-tag">{item.category === 'archive' ? t.archiveTag : t.currentTag}</span><strong>{item[language]}</strong><span className="gallery-view"><ArrowUpRight size={16} /> {t.gallery.view}</span></span></button>)}</div>
+          <div className="gallery-grid">{filteredGallery.map((item, index) => <button className={`gallery-card gallery-card-${index + 1}`} type="button" key={item.src} onClick={() => setActiveImage(item)} aria-label={`${item[language]} - ${t.gallery.view}`}><img src={item.src} alt={item[language]} /><span className="gallery-overlay" /><span className="gallery-card-content"><span className="gallery-tag">{item.category === 'archive' ? t.archiveTag : t.currentTag}</span><strong>{item[language]}</strong><span className="gallery-view"><ArrowUpRight size={16} /> {t.gallery.view}</span></span></button>)}</div>
           <p className="archive-note"><span className="archive-note-dot" />{t.gallery.archiveNote}</p>
         </div>
       </section>
@@ -560,15 +559,15 @@ export default function Home() {
             <div className="contact-detail"><span className="detail-icon"><Clock3 size={19} /></span><span><small>{t.contact.hoursTitle}</small><strong>{t.contact.hours}</strong></span></div>
           </div>
         </div>
-        <div className="container location-card"><div className="location-image"><Image src="/gallery/08-atelier.png" alt="Uğur Special çalışma adresi, Çağlayan" fill sizes="(max-width: 760px) 100vw, 40vw" /><span>ÇAĞLAYAN / İSTANBUL</span></div><div className="location-content"><span className="location-mark"><MapPin size={20} /></span><div><small>UĞUR SPECIAL</small><strong>{address}</strong></div><a href={mapHref} target="_blank" rel="noreferrer">{t.contact.map} <ArrowUpRight size={16} /></a></div></div>
+        <div className="container location-card"><div className="location-image"><img src="/gallery/08-atelier.png" alt="Uğur Special çalışma adresi, Çağlayan" /><span>ÇAĞLAYAN / İSTANBUL</span></div><div className="location-content"><span className="location-mark"><MapPin size={20} /></span><div><small>UĞUR SPECIAL</small><strong>{address}</strong></div><a href={mapHref} target="_blank" rel="noreferrer">{t.contact.map} <ArrowUpRight size={16} /></a></div></div>
       </section>
 
       <footer className="site-footer">
-        <div className="container footer-main"><a className="brand brand-footer" href="#home" aria-label="Uğur Special ana sayfa"><span className="brand-logo brand-logo-only"><Image src="/logo.png" alt="Uğur Special — desen tasarım uygulama" width={1536} height={1024} /></span></a><div className="footer-message"><strong>{t.contact.footerCta}</strong><span>{t.contact.footerDescription}</span></div><div className="footer-links"><a href="mailto:info@ugurspecial.com"><Mail size={16} /> info@ugurspecial.com</a><a href="https://www.instagram.com/" target="_blank" rel="noreferrer"><AtSign size={16} /> Instagram</a></div></div>
+        <div className="container footer-main"><a className="brand brand-footer" href="#home" aria-label="Uğur Special ana sayfa"><span className="brand-logo brand-logo-only"><img src="/logo.png" alt="Uğur Special — desen tasarım uygulama" width="1536" height="1024" /></span></a><div className="footer-message"><strong>{t.contact.footerCta}</strong><span>{t.contact.footerDescription}</span></div><div className="footer-links"><a href="mailto:info@ugurspecial.com"><Mail size={16} /> info@ugurspecial.com</a><a href="https://www.instagram.com/" target="_blank" rel="noreferrer"><AtSign size={16} /> Instagram</a></div></div>
         <div className="container footer-bottom"><span>© {new Date().getFullYear()} Uğur Special. Tüm hakları saklıdır.</span><span>Çağlayan · İstanbul</span></div>
       </footer>
 
-      {activeImage && <dialog className="lightbox" open aria-label={activeImage[language]}><button className="lightbox-close" type="button" onClick={() => setActiveImage(null)} aria-label={t.modalClose}><X size={22} /></button><div className="lightbox-content"><Image src={activeImage.src} alt={activeImage[language]} width={1400} height={950} /><div className="lightbox-caption"><span>{activeImage.category === 'archive' ? t.archiveTag : t.currentTag}</span><strong>{activeImage[language]}</strong></div></div></dialog>}
+      {activeImage && <dialog className="lightbox" open aria-label={activeImage[language]}><button className="lightbox-close" type="button" onClick={() => setActiveImage(null)} aria-label={t.modalClose}><X size={22} /></button><div className="lightbox-content"><img src={activeImage.src} alt={activeImage[language]} width="1400" height="950" /><div className="lightbox-caption"><span>{activeImage.category === 'archive' ? t.archiveTag : t.currentTag}</span><strong>{activeImage[language]}</strong></div></div></dialog>}
     </main>
   );
 }

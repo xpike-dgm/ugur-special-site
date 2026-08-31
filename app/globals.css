@@ -581,6 +581,8 @@ button {
 }
 
 .hero-image-wrap img {
+  position: absolute;
+  inset: 0;
   display: block;
   width: 100%;
   height: 100%;
@@ -1196,6 +1198,8 @@ blockquote {
 }
 
 .gallery-card img {
+  position: absolute;
+  inset: 0;
   display: block;
   width: 100%;
   height: 100%;
@@ -1556,6 +1560,8 @@ a.contact-detail:hover {
 }
 
 .location-image img {
+  position: absolute;
+  inset: 0;
   display: block;
   width: 100%;
   height: 100%;
